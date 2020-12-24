@@ -1,10 +1,12 @@
 <template>
-$END$
+<section>
+
+</section>
 </template>
 
 <script>
 export default {
-name: "Try"
+  name: "Try"
 }
 </script>
 
