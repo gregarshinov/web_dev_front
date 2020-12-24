@@ -4,7 +4,7 @@
       <router-link :to="{name: 'Home'}" class="link is-info">Home</router-link>
     </p>
     <p class="level-item has-text-centered">
-      <a class="link is-info">Try</a>
+      <router-link :to="{name: 'Try'}" class="link is-info">Try</router-link>
     </p>
     <h1 class="level-item has-text-centered title">
       Char2SymVec

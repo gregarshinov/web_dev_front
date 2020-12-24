@@ -9,6 +9,7 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",
     "sass": "^1.29.0",
