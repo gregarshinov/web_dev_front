@@ -8,6 +8,7 @@
           </p>
           <article>
             <lorem-ipsum add="2p" class="has-text-left"/>
+            Char2SymVec is a project dedicated to research the low resoursed Chukchi language.<br> We aimed to make a neural network language model for the Chukchi language and for that we had to solve the problem of creating emmbedings having only a small dataset of Chukchi texts.
           </article>
           <router-link :to="{name: 'Research'}" class="is-pulled-right is-dark button">Read the paper</router-link>
         </div>
