@@ -1,23 +1,31 @@
 <template>
 <section class="section">
-  <div class="column">
-    <div class="p has-text-left my-2 is-size-5">
-      Here you can try out our model. If you type some Chuckchi words or morphemes into this field,
-      you will be suggested a few typing hints. You can click on suggestions to append them to the end of your text.
-    </div>
-    <div :class="{control: true, 'is-loading': isLoading}">
-      <textarea class="textarea" placeholder="Type in Chuckchi here" v-model="text"></textarea>
-    </div>
-    <div class="my-2 has-text-left">
-      <transition name="slide-fade">
-        <div v-show="!isLoading && text">
-        <button
-            @click="text += suggestion"
-            class="button has-background-info has-text-white"
-            v-for="(suggestion, i) in suggestions"
-            :key="i">{{ suggestion }}</button>
-        </div>
-      </transition>
+  <div class="columns">
+    <div class="column">
+      <div class="p has-text-left my-2 is-size-5">
+        Here you can try out our model. If you type some Chuckchi words or morphemes into this field,
+        you will be suggested a few typing hints. You can click on suggestions to append them to the end of your text.
+      </div>
+      <div :class="{control: true, 'is-loading': isLoading}">
+        <textarea class="textarea" placeholder="Type in Chuckchi here" v-model="text"></textarea>
+      </div>
+      <div class="column my-2 has-text-left">
+        <transition name="slide-fade">
+          <div v-show="!isLoading && text">
+            <button
+                @click="loadSuggestions"
+                class="button has-background-info-light has-text-black-bis is-rounded mx-2"
+                :class="{'is-loading': isLoading}">Get suggestions
+            </button>
+            <button
+                @click="text += suggestion"
+                class="button has-background-info has-text-white is-rounded"
+                v-for="(suggestion, i) in suggestions"
+                :key="i">{{ suggestion }}
+            </button>
+          </div>
+        </transition>
+      </div>
     </div>
   </div>
 </section>
@@ -47,11 +55,6 @@ export default {
       } finally {
         this.isLoading = false;
       }
-    }
-  },
-  watch: {
-    async text ()  {
-      return await this.loadSuggestions()
     }
   }
 }
