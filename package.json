@@ -15,7 +15,9 @@
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "vue": "^2.6.11",
+    "vue-firework": "^0.3.0",
     "vue-lorem-ipsum": "0.0.1",
+    "vue-niege": "^0.1.1",
     "vue-router": "^3.4.9"
   },
   "devDependencies": {

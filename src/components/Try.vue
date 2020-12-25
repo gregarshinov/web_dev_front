@@ -1,38 +1,38 @@
 <template>
-<section class="section">
-  <div class="columns">
-    <div class="column">
-      <div class="p has-text-left my-2 is-size-5">
-        Here you can try out our model. If you type some Chuckchi words or morphemes into this field,
-        you will be suggested a few typing hints. You can click on suggestions to append them to the end of your text.
-      </div>
-      <div :class="{control: true, 'is-loading': isLoading}">
-        <textarea class="textarea" placeholder="Type in Chuckchi here" v-model="text"></textarea>
-      </div>
-      <div class="column my-2 has-text-left">
-        <transition name="slide-fade">
-          <div v-show="!isLoading && text">
-            <button
-                @click="loadSuggestions"
-                class="button has-background-info-light has-text-black-bis is-rounded mx-2"
-                :class="{'is-loading': isLoading}">Get suggestions
-            </button>
-            <button
-                @click="text += suggestion"
-                class="button has-background-info has-text-white is-rounded"
-                v-for="(suggestion, i) in suggestions"
-                :key="i">{{ suggestion }}
-            </button>
-          </div>
-        </transition>
+  <section class="section">
+    <div class="columns">
+      <div class="column">
+        <div class="p has-text-left my-2 is-size-5">
+          Here you can try out our model. If you type some Chuckchi words or morphemes into this field,
+          you will be suggested a few typing hints. You can click on suggestions to append them to the end of your text.
+        </div>
+        <div :class="{control: true, 'is-loading': isLoading}">
+          <textarea class="textarea" placeholder="Type in Chuckchi here" v-model="text"></textarea>
+        </div>
+        <div class="column my-2 has-text-left">
+          <transition name="slide-fade">
+            <div v-show="!isLoading && text">
+              <button
+                  @click="loadSuggestions"
+                  class="button has-background-info-light has-text-black-bis is-rounded mx-2"
+                  :class="{'is-loading': isLoading}">Get suggestions
+              </button>
+              <button
+                  @click="text += suggestion"
+                  class="button has-background-info has-text-white is-rounded"
+                  v-for="(suggestion, i) in suggestions"
+                  :key="i">{{ suggestion }}
+              </button>
+            </div>
+          </transition>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </template>
 
 <script>
-import { fetchSuggestions } from "@/api"
+import {fetchSuggestions} from "@/api"
 
 export default {
   name: "Try",
@@ -48,7 +48,7 @@ export default {
     loadSuggestions: async function () {
       try {
         this.isLoading = true;
-        const { data } = await fetchSuggestions(this.text);
+        const {data} = await fetchSuggestions(this.text);
         this.suggestions = data.suggestions
       } catch (err) {
         this.isError = true;
@@ -66,11 +66,14 @@ export default {
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
+
 .slide-fade-leave-active {
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
+
 .slide-fade-enter, .slide-fade-leave-to
-  /* .slide-fade-leave-active до версии 2.1.8 */ {
+  /* .slide-fade-leave-active до версии 2.1.8 */
+{
   transform: translateX(10px);
   opacity: 0;
 }
