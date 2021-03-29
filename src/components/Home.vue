@@ -5,13 +5,13 @@
         <div class="container">
           <div class="column">
             <p class="title has-text-left">
-              Welcome to the Char2SymVec Project!
+              {{ $t('message.home.headline') }}
             </p>
             <p class="has-text-left is-size-3">
-              Char2SymVec is a project dedicated to research the low resoursed Chukchi language.<br> We aimed to make a neural network language model for the Chukchi language and for that we had to solve the problem of creating emmbedings having only a small dataset of Chukchi texts.
+              {{ $t('message.home.heroText') }}
             </p>
           </div>
-          <router-link :to="{name: 'Research'}" class="is-pulled-right is-dark button">Learn more</router-link>
+          <router-link :to="{name: 'Research'}" class="is-pulled-right is-dark button">{{ $t('message.home.learnMore') }}</router-link>
         </div>
       </div>
     </section>

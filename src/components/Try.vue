@@ -2,11 +2,10 @@
 <section class="section">
   <div class="column">
     <div class="p has-text-left my-2 is-size-5">
-      Here you can try out our model. If you type some Chuckchi words or morphemes into this field,
-      you will be suggested a few typing hints. You can click on suggestions to append them to the end of your text.
+      {{$t('message.try.instructions')}}
     </div>
     <div :class="{control: true, 'is-loading': isLoading}">
-      <textarea class="textarea" placeholder="Type in Chuckchi here" v-model="text"></textarea>
+      <textarea class="textarea" :placeholder="$t('message.try.placeholder')" v-model="text"></textarea>
     </div>
     <div class="my-2 has-text-left">
       <transition name="slide-fade">
