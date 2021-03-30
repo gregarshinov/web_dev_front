@@ -2,7 +2,7 @@
   "message": {
     "home": {
       "headline": "ChukchiType - Предиктивный ввод текста для чукотского языка",
-      "heroText": "Char2SymVec is a project dedicated to research the low resourced Chukchi language.\nWe aimed to make a neural network language model for the Chukchi language and for that we had to solve the problem of creating emmbedings having only a small dataset of Chukchi texts.",
+      "heroText": "ChukchiType - инструмент, который был создан в ходе работы над проектом Char2SymVec. Этот проект посвящен исследованию малоресурсных языков. Целью проекта являлось создание нейронной языковой модели для чукотского языка. Для это нам необходимо было решить ряд проблем, связанных, в том числе, с созданием эммбедингов на малых датасетах.",
       "learnMore": "Узнать больше"
     },
     "nav": {
@@ -11,13 +11,13 @@
       "repo": "Репозиторий на GitHub"
     },
     "try": {
-      "instructions": "Here you can try out our model. If you type some Chukchi words or morphemes into this field,\n      you will be suggested a few typing hints. You can click on suggestions to append them to the end of your text.",
+      "instructions": "Здесь вы можете протестировать работу нашей языковой модели. Для этого достаточно начать писать любое чукотское слово и модель предложит вам варинты продолжения фразы. Вы можете нажать на один из предложенных вариантов, либо написать что-то свое. Уверены, что вы знакомы с подобными механизмами, то же самое есть в вашем смартфоне в любом из мессенджеров, но для русского языка.",
       "placeholder": "Введите текст на чукотском"
     },
     "research": {
-      "headline": "Tensor Product Representation In Service of low-resource polysynthetic languages",
-      "authors": "Greg Arshinov, Daria Samsonova, Sergey Kosyak, Mikhail Voronov",
-      "body": "Polysynthetic low-resource languages are poorly treated with standard language modeling approaches. In this paper a hypothesis that word-segment embeddings based on tensor product of representations show better performance for low-resource languages compared to conventional word- and char-based models is tested. In order to prove it a pipeline that allows to process low-resource polysynthetic languages was developed. Using Neural Sequence Labeling Toolkit \\parencite{yang2018ncrf} to train a segmenter on a Chukchi corpus, a raw Chuckchi corpus was segmented and the \\textit{iiksiin} \\parencite{iiksiin} model was employed to create the embeddings. After that we tested them on the language modelling task and evaluated the results, which showed a notable increase in performance compared to regular approaches.",
+      "headline": "Тензорное представление малоресурных полисинтетических языков",
+      "authors": "Григорий Аршинов, Дарья Самсонова, Сергей Косяк, Михаил Воронов",
+      "body": "Современные методы языкового моделирования плохо подходят для малоресурсных полисинтетических языков в связи с рядом причин. В нашей работе мы исследуем применение эммбедингов, построенных на алгоритме тензорного произведения с словесными сегментами. Результаты проведенных нами экспериментов показывают сравнительно лучшее качество языкового моделирования. Также мы рассказываем о построенном нами пайплайне и самой языковой модели, позволивших нам реализовать генерацию текста на чукотском языке, а также провести сравнение традиционных подходов с тем, что мы применили в своей работе. Мы использовали Neural Sequence Labeling Toolkit для создания модели сегментатора для чукотского языка, а также модель AWD-LSTM в качестве языковой модели на основе наших эммбедингов. Результаты экспериментов и подробное описание проведенных работ вы можете найти в статье.",
       "read": "Читать далее"
     }
   }
