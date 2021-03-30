@@ -14,7 +14,7 @@
               <button
                   @click="loadSuggestions"
                   class="button has-background-info-light has-text-black-bis is-rounded mx-2"
-                  :class="{'is-loading': isLoading}">Get suggestions
+                  :class="{'is-loading': isLoading}">{{ $t('message.try.getSuggestions') }}
               </button>
               <button
                   @click="text += suggestion"

@@ -13,7 +13,8 @@
     },
     "try": {
       "instructions": "Here you can try out our model. If you type some Chukchi words or morphemes into this field,\n      you will be suggested a few typing hints. You can click on suggestions to append them to the end of your text.",
-      "placeholder": "Type in Chukchi here"
+      "placeholder": "Type in Chukchi here",
+      "getSuggestions": "Get suggestions"
     },
     "research": {
       "headline": "Tensor Product Representation In Service of low-resource polysynthetic languages",
