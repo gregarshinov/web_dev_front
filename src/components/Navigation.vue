@@ -12,8 +12,6 @@
     <p class="level-item has-text-centered">
       <a class="link is-info" href="https://github.com/ftyers/nis-nplm">{{ $t('message.nav.repo') }}</a>
     </p>
-<!--    <p class="level-item has-text-centered">-->
-<!--      <a class="link is-info" @click.prevent="">{{ $t('message.nav.changeLang') }}</a>-->
       <div class="level-item has-text-centered">
 
         <div class="select"><select v-model="$i18n.locale">
@@ -22,7 +20,6 @@
           </option>
         </select></div>
       </div>
-<!--    </p>-->
   </nav>
 </template>
 

@@ -1,8 +1,10 @@
 {
   "message": {
     "home": {
+      "compLing": "Computational Linguistics",
+      "link": "https://www.hse.ru/en/ma/ling/",
       "headline": "Welcome to the ChukchiType Project!",
-      "heroText": "Char2SymVec is a project dedicated to research the low resourced Chukchi language.\nWe aimed to make a neural network language model for the Chukchi language and for that we had to solve the problem of creating emmbedings having only a small dataset of Chukchi texts.",
+      "heroText": "Char2SymVec is a project by a group of {0} student in Higher School of Economics dedicated to research the low resourced Chukchi language.\nWe aimed to make a neural network language model for the Chukchi language and for that we had to solve the problem of creating emmbedings having only a small dataset of Chukchi texts.",
       "learnMore": "Learn more"
     },
     "nav": {

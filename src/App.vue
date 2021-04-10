@@ -4,8 +4,10 @@
       <snow v-if="weather === 'snow'"/>
       <vue-firework v-if="weather === 'fireworks'"/>
     </div>
-    <navigation/>
-    <router-view/>
+    <div class="container">
+      <navigation/>
+      <router-view/>
+    </div>
   </div>
 </template>
 
